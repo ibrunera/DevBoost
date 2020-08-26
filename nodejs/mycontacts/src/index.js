@@ -2,8 +2,8 @@ const express = require('express');
 
 const app = express();
 
-app.get('/', (request, response) => {
-  response.send('Hello worlds');
-});
+const routes = require('./routes');
+
+app.use(routes);
 
 app.listen(3000, () => console.log('Server start at http://localhost:3000'));
